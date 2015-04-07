@@ -86,7 +86,7 @@ endfunction
 
 function! s:get_transitioned_seperator(self, prev_group, group, side)
   let line = ''
-  call airline#highlighter#add_separator(a:prev_group, a:group, a:side)
+  call airline#highlighter#add_separator(a:prev_group, a:group, 1)
   let line .= '%#'.a:prev_group.'_to_'.a:group.'#'
   let line .= a:side ? a:self._context.left_sep : a:self._context.right_sep
   let line .= '%#'.a:group.'#'
